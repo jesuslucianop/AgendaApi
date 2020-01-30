@@ -13,7 +13,13 @@ class CreateContactosTable extends Migration
      */
     public function up()
     {
-  
+        Schema::create('Contactos',function(Blueprint $table){
+            $table->increments('id');
+            $table->string('Nombre');
+            $table->string('Apellido');
+            $table->string('Telefeno');
+            $table->string('Correo');
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class CreateContactosTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('Contactos');
     }
 }
