@@ -13,6 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Article
+Route::post('Contactos', 'Contactoscontroller@Createcontact')->name('Createcontact');
+Route::get('Contactos', 'Contactoscontroller@Getallcontacts')->name('Getallcontacts');
+Route::PUT('Contactos', 'Contactoscontroller@UpdateContact')->name('UpdateContact');
+Route::delete('Contactos', 'Contactoscontroller@DeleteContact')->name('DeleteContact');

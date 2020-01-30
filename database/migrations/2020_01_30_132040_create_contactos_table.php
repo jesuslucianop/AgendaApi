@@ -19,6 +19,7 @@ class CreateContactosTable extends Migration
             $table->string('Apellido');
             $table->string('Telefeno');
             $table->string('Correo');
+            $table->timestamps();
         });
     }
 
